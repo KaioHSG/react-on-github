@@ -6,27 +6,23 @@ on:
       - main
 
 jobs:
-  make-build:
+  run-build:
     runs-on: ubuntu-22.04
     steps:
       - name: checkout-code
         uses: actions/checkout@v4
       
-      # Install Node.js.
       - name: install-nodejs
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       
-      # Install npm and required packages.
       - name: install-dependencies
         run: npm install
       
-      # Create the build.
       - name: build-project
         run: npm run build
       
-      # Publish the build files to GitHub Pages.
       - name: deploy-to-github-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
