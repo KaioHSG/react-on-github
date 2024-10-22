@@ -26,13 +26,9 @@ jobs:
       - name: build-project
         run: npm run build
       
-      # Listar arquivos no diretório de saída
-      - name: List build directory
-        run: ls -la ./dist # Altere para o diretório de saída da sua build, se necessário
-      
       # Publish the build files to GitHub Pages.
       - name: deploy-to-github-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build
