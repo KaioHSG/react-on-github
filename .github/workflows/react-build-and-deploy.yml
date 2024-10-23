@@ -19,6 +19,7 @@ jobs:
         run: npm run build
   deploy:
     runs-on: ubuntu-22.04
+    needs: build
     steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
