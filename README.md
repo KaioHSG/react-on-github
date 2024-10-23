@@ -6,15 +6,13 @@
 npx create-react-app {app-name}
 ```
 
-E.g.: `npx create-react-app react-on-github`
-
 3. Add in `package.json`:
 
 ``` json
 "homepage": "https://{user-name}.github.io/{repositorie-name}"
 ```
 
-E.g.: `"homepage": "kaiohsg.github.io/react-on-github"`
+E.g.: `https://kaiohsg.github.io/react-on-github`
 
 4. Create `.github/workflows/react-build-and-deploy.yml`:
 
