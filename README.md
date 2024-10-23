@@ -6,6 +6,8 @@
 npx create-react-app {app-name}
 ```
 
+E.g.: `npx create-react-app react-on-github`
+
 3. Add in `package.json`:
 
 ``` json
