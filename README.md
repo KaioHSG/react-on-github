@@ -42,6 +42,12 @@ jobs:
       - name: Build
         run: npm run build
       
+      - name: Copy CNAME
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME ./build/CNAME
+          fi
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
